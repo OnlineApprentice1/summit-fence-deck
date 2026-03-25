@@ -163,7 +163,7 @@ export default function TestimonialsSection() {
       {/* Single child wrapping the full section content */}
       <div>
         {/* Header — centred */}
-        <div className="mb-12 text-center">
+        <div className="mb-12">
           <span
             className="badge-label mb-3 inline-block"
             style={{ color: "var(--clr-accent)" }}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { Check } from "lucide-react";
 import SectionOffsetGrid from "@/components/layouts/SectionOffsetGrid";
@@ -100,7 +101,7 @@ function MaterialCard({
     >
       {/* Image */}
       <div className="relative h-48 w-full overflow-hidden">
-        <img
+        <Image
           src={material.image}
           alt={material.alt}
           className="h-full w-full rounded-t-xl object-cover"
@@ -158,7 +159,7 @@ export default function MaterialsSection() {
   return (
     <SectionOffsetGrid className="spotlight-section section-bg-texture">
       {/* Header */}
-      <div className="mb-10 text-center sm:mb-12 lg:col-span-full">
+      <div className="mb-10 sm:mb-12 lg:col-span-full">
         <span
           className="badge-label mb-4 inline-block"
           style={{ color: "var(--clr-accent)" }}

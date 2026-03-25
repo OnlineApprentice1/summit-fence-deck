@@ -133,7 +133,7 @@ export default function ProcessSection() {
           initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
           animate={headerInView ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.5, ease: "easeOut" as const }}
-          className="text-center"
+          className="text-left max-w-2xl"
         >
           <span className="badge-label">How It Works</span>
           <h2 className="type-section mt-4">

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Hammer, Eye, Shield, Users, ArrowRight } from "lucide-react";
 import SectionFullBleed from "@/components/layouts/SectionFullBleed";
@@ -17,17 +18,20 @@ function HeroBackground() {
   return (
     <div className="absolute inset-0">
       {/* Background image */}
-      <img
+      <Image
         src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&h=600&fit=crop&q=80"
         alt="Carpenter working on a custom outdoor structure"
         className="absolute inset-0 h-full w-full object-cover"
+        fill
+        sizes="100vw"
+        priority
       />
       {/* Dark overlay for text readability */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.85) 100%)",
+            "linear-gradient(to bottom, color-mix(in oklch, var(--clr-surface-1) 75%, transparent) 0%, color-mix(in oklch, var(--clr-surface-1) 60%, transparent) 50%, color-mix(in oklch, var(--clr-surface-1) 85%, transparent) 100%)",
         }}
       />
       {/* Spotlight gradient from above */}

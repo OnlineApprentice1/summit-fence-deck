@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import SectionAsymmetricSplit from "@/components/layouts/SectionAsymmetricSplit";
@@ -112,7 +113,7 @@ export default function SignatureProject() {
       animate={isInView ? "visible" : "hidden"}
       variants={prefersReducedMotion ? fadeVariants : blurSharpenVariants}
     >
-      <img
+      <Image
         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop&q=80"
         alt="Completed backyard deck and cedar fence project in Wellington, Guelph"
         className="aspect-[3/2] w-full rounded-xl object-cover"
